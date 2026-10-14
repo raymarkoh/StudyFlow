@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f6f2" />
+    <meta name="description" content="StudyFlow helps you plan smarter and study better." />
+    <title>StudyFlow | Plan smarter. Study better.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#dashboard" aria-label="StudyFlow home">
+          <span class="brand-mark"><span></span><span></span><span></span></span>
+          <span>studyflow</span>
+        </a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-link active" data-view="dashboard"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-link" data-view="subjects"><span class="nav-icon">▦</span>Subjects</button>
+          <button class="nav-link" data-view="planner"><span class="nav-icon">▤</span>Study planner</button>
+          <button class="nav-link" data-view="notes"><span class="nav-icon">▧</span>Notes</button>
+          <button class="nav-link" data-view="flashcards"><span class="nav-icon">▱</span>Flashcards</button>
+          <button class="nav-link" data-view="quizzes"><span class="nav-icon">◉</span>Quizzes</button>
+          <button class="nav-link" data-view="focus"><span class="nav-icon">◷</span>Focus timer</button>
+          <button class="nav-link" data-view="progress"><span class="nav-icon">↗</span>Progress</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <button class="upgrade-card" data-view="upgrade">
+            <span class="upgrade-spark">✳</span>
+            <span class="upgrade-copy"><strong>Make room to grow</strong><small>Explore StudyFlow Pro</small></span>
+            <span class="upgrade-arrow">↗</span>
+          </button>
+          <button class="profile-link" data-view="settings">
+            <span class="avatar">JD</span>
+            <span class="profile-copy"><strong>Jamie Davis</strong><small>Free plan</small></span>
+            <span class="profile-more">···</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu icon-button" id="menu-toggle" aria-label="Open navigation">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-divider">/</span><strong id="page-label">Overview</strong></div>
+          <div class="topbar-actions">
+            <div class="date-chip"><span class="status-dot"></span><span id="today-date"></span></div>
+            <button class="icon-button notification-button" aria-label="Notifications" title="Notifications">♧<i></i></button>
+            <button class="avatar avatar-small" data-view="settings" aria-label="Open profile settings">JD</button>
+          </div>
+        </header>
+        <div id="view-root" class="view-root" aria-live="polite"></div>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <div class="modal-backdrop" id="modal-backdrop" hidden>
+      <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <button class="active" data-view="dashboard"><span>⌂</span>Home</button>
+      <button data-view="subjects"><span>▦</span>Subjects</button>
+      <button data-view="focus"><span>◷</span>Focus</button>
+      <button data-view="progress"><span>↗</span>Progress</button>
+    </nav>
+  </body>
+</html>
