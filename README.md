@@ -1,6 +1,3 @@
-# StudyFlow
-Plan smarter. Study better.
-
 # 📚 StudyFlow
 
 Plan smarter. Study better. 🎯
